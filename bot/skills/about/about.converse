@@ -1,0 +1,14 @@
+@Intent('about', [
+    'about page',
+    'about',
+    'the about page',
+    'find the about page'
+    'how do I find the project page'
+])
+about() {
+    @Format('about', {
+        url: '/https://xitraisia.github.io/homepage/about.html',
+        button: 'view',
+    })
+    > Ok, here is the about page
+}

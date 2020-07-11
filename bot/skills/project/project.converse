@@ -1,0 +1,14 @@
+@Intent('project', [
+    'project page',
+    'project',
+    'the project page',
+    'find the project page'
+    'how do I find the project page'
+])
+project() {
+    @Format('project', {
+        url: '/https://xitraisia.github.io/homepage/about.html',
+        button: 'view',
+    })
+    > Ok, here is the project page
+}

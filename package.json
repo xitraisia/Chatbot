@@ -1,0 +1,32 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "this is a simple chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xitraisia/Chatbot.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "Daniele Tenga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xitraisia/Chatbot/issues"
+  },
+  "homepage": "https://github.com/xitraisia/Chatbot#readme",
+  "devDependencies": {
+    "newbot": "^0.7.1",
+    "newbot-cli": "^3.1.0",
+    "newbot-formats": "^1.7.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "newbot-express": "^0.4.0",
+    "skills-validator": "file:node_modules/botbuilder/skills-validator/skills-validator-1.0.0.tgz"
+  }
+}

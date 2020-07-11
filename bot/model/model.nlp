@@ -1,0 +1,482 @@
+{
+  "settings": {
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": false,
+    "modelFileName": "model.nlp"
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hey": {
+            "intent": "hello",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "hello",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "hello",
+            "domain": "default"
+          },
+          "good,morning": {
+            "intent": "hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "hello",
+            "domain": "default"
+          },
+          "page,project": {
+            "intent": "project",
+            "domain": "default"
+          },
+          "project": {
+            "intent": "project",
+            "domain": "default"
+          },
+          "page,project,the": {
+            "intent": "project",
+            "domain": "default"
+          },
+          "find,page,project,the": {
+            "intent": "project",
+            "domain": "default"
+          },
+          "do,find,how,i,page,project,the": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "about,page": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "about": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "about,page,the": {
+            "intent": "about",
+            "domain": "default"
+          },
+          "about,find,page,the": {
+            "intent": "about",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "hello": "default",
+          "project": "default",
+          "about": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Good afternoon",
+            "intent": "hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Good morning",
+            "intent": "hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "project page",
+            "intent": "project"
+          },
+          {
+            "domain": "default",
+            "utterance": "project",
+            "intent": "project"
+          },
+          {
+            "domain": "default",
+            "utterance": "the project page",
+            "intent": "project"
+          },
+          {
+            "domain": "default",
+            "utterance": "find the project page",
+            "intent": "project"
+          },
+          {
+            "domain": "default",
+            "utterance": "how do I find the project page",
+            "intent": "project"
+          },
+          {
+            "domain": "default",
+            "utterance": "about page",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "about",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "the about page",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "find the about page",
+            "intent": "about"
+          },
+          {
+            "domain": "default",
+            "utterance": "how do I find the project page",
+            "intent": "about"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hey": 1,
+              "hello": 1,
+              "good": 1,
+              "afternoon": 1,
+              "morning": 1,
+              "hi": 1,
+              "project": 1,
+              "page": 1,
+              "the": 1,
+              "find": 1,
+              "how": 1,
+              "do": 1,
+              "i": 1,
+              "about": 1
+            },
+            "intents": {
+              "hello": 1,
+              "project": 1,
+              "about": 1
+            },
+            "intentFeatures": {
+              "hello": [
+                "hey",
+                "hello",
+                "good",
+                "afternoon",
+                "morning",
+                "hi"
+              ],
+              "project": [
+                "project",
+                "page",
+                "the",
+                "find",
+                "how",
+                "do",
+                "i"
+              ],
+              "about": [
+                "about",
+                "page",
+                "the",
+                "find",
+                "how",
+                "do",
+                "i",
+                "project"
+              ]
+            },
+            "featuresToIntent": {
+              "hey": [
+                "hello"
+              ],
+              "hello": [
+                "hello"
+              ],
+              "good": [
+                "hello"
+              ],
+              "afternoon": [
+                "hello"
+              ],
+              "morning": [
+                "hello"
+              ],
+              "hi": [
+                "hello"
+              ],
+              "project": [
+                "project",
+                "about"
+              ],
+              "page": [
+                "project",
+                "about"
+              ],
+              "the": [
+                "project",
+                "about"
+              ],
+              "find": [
+                "project",
+                "about"
+              ],
+              "how": [
+                "project",
+                "about"
+              ],
+              "do": [
+                "project",
+                "about"
+              ],
+              "i": [
+                "project",
+                "about"
+              ],
+              "about": [
+                "about"
+              ]
+            },
+            "neuralNetwork": {
+              "features": [
+                "hey",
+                "hello",
+                "good",
+                "afternoon",
+                "morning",
+                "hi",
+                "project",
+                "page",
+                "the",
+                "find",
+                "how",
+                "do",
+                "i",
+                "about",
+                "nonefeature"
+              ],
+              "intents": [
+                "hello",
+                "project",
+                "about",
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  7.211534023284912,
+                  7.211533546447754,
+                  4.8076887130737305,
+                  2.403851270675659,
+                  2.4038474559783936,
+                  7.211533069610596,
+                  -5.288459300994873,
+                  -2.357203722000122,
+                  -0.6923214197158813,
+                  -0.2518700957298279,
+                  -0.07426468282938004,
+                  -0.07426468282938004,
+                  -0.07426468282938004,
+                  -5.288457870483398,
+                  -5.288456439971924,
+                  5.288462151429387
+                ],
+                [
+                  -1.04606032371521,
+                  -1.0460602045059204,
+                  -0.7543874979019165,
+                  -0.38908258080482483,
+                  -0.36530500650405884,
+                  -1.0460602045059204,
+                  11.480578422546387,
+                  0.022931674495339394,
+                  0.032929036766290665,
+                  0.030726945027709007,
+                  -2.20666241645813,
+                  -2.20666241645813,
+                  -2.20666241645813,
+                  -4.420884609222412,
+                  -1.0460591316223145,
+                  1.0460637767231409
+                ],
+                [
+                  -1.1103711128234863,
+                  -1.1101329326629639,
+                  -0.7954827547073364,
+                  -0.41363635659217834,
+                  -0.3818463683128357,
+                  -1.1099005937576294,
+                  -4.61516809463501,
+                  0.08717534691095352,
+                  0.2224254310131073,
+                  0.18904057145118713,
+                  3.361241579055786,
+                  3.361241579055786,
+                  3.361241579055786,
+                  11.67598819732666,
+                  -1.1106390953063965,
+                  0.9407152788146873
+                ],
+                [
+                  -1.4418766498565674,
+                  -1.4418758153915405,
+                  -0.9650118947029114,
+                  -0.4858053922653198,
+                  -0.47920626401901245,
+                  -1.4418758153915405,
+                  -1.441875696182251,
+                  -0.5468889474868774,
+                  -0.13998264074325562,
+                  -0.048863548785448074,
+                  -0.014810178428888321,
+                  -0.014810178428888321,
+                  -0.014810178428888321,
+                  -1.441875696182251,
+                  11.058117866516113,
+                  1.441877006764131
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Hey"
+      ],
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Good afternoon"
+      ],
+      [
+        "en",
+        "Good morning"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "project page"
+      ],
+      [
+        "en",
+        "project"
+      ],
+      [
+        "en",
+        "the project page"
+      ],
+      [
+        "en",
+        "find the project page"
+      ],
+      [
+        "en",
+        "how do I find the project page"
+      ],
+      [
+        "en",
+        "about page"
+      ],
+      [
+        "en",
+        "about"
+      ],
+      [
+        "en",
+        "the about page"
+      ],
+      [
+        "en",
+        "find the about page"
+      ],
+      [
+        "en",
+        "how do I find the project page"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

@@ -1,0 +1,41 @@
+@Intent('hello')
+hello() {
+    > Hello! Would you like to hear a joke?
+}
+
+@Intent('about')
+about() {
+    > Ok, here is the about page
+}
+
+@Intent('project')
+project() {
+    > Ok, here is the project page
+}
+
+
+@Event('start')
+joke() {
+    @Format('quickReplies' ['Tell a joke'])
+    > I can tell you a joke!
+    ---
+    > My email password has been hacked. That's the third time I've had to rename the cat.          
+    > What does a baby computer call it's father? Data.
+    > My New Year's resolution is 4K.
+    > Any room is a panic room if you've lost your phone in it.
+    > Why was the JavaScript developer sad? Because he didn't Node how to Express himself.
+    > Why did the developer go broke? Because he used up all his cache.
+    > There are 10 types of people in the world: those who understand binary, and those who don't.
+    > Instagram is just Twitter for people who go outside
+    > Human: What do we want?! Computer: Natural language processing! Human: When do we want it?! Computer: When do we want what?
+    > Is your name Wi-Fi? Because I'm feeling a connection 
+    ---
+}
+
+@Event('nothing')
+nothing() {
+    ---
+    > I don't know
+    > What? 
+    ---
+}
